@@ -5,96 +5,90 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kampagnesite - Gruppe 8</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: 'safety';
-            src: url('safety-light-webfont.woff2') format('woff2'),
-                url('safety-light-webfont.woff2') format('woff');
-        }
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #414B5A;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        figure {
-            margin: 0;
-            margin-block-start: 0;
-            margin-block-end: 0;
-            margin-inline-start: 0;
-            margin-inline-end: 0;
-            padding: 0;
-        }
-
-        img {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        section {
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #373d46;
-            height: 45px;
-            display: flex;
-        }
-
-        .logo {
-            display: flex;
-            margin: 8px;
-        }
-
-        .logo img {
-            width: inherit;
-            height: 100%;
-        }
-
-        .placeholder {
-            background-color: #414B5A;
-            margin-left: 8px;
-        }
-
-        h1 {
-            color: white;
-            font-family: 'safety';
-        }
-
-        p {
-            color: white;
-        }
-
-    </style>
 </head>
 
 <body>
     <header>
+        <nav id="mainNav">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="about.html">
+                        <li>KONCEPT</li>
+                    </a>
+                    <a href="#">
+                        <li>VIDEO</li>
+                    </a>
+                    <a href="#">
+                        <li>INTERVIEW</li>
+                    </a>
+                    <a href="mood.html">
+                        <li>PROCESSDOKUMENTATION</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
         <figure class="logo">
-            <img src="Logo.svg" alt="">
+            <img src="img/Logo.svg" alt="">
         </figure>
+        <nav id="subnav">
+            <a href="">KAMPAGNE</a>
+            <a href="">VIDEO</a>
+            <a href="">INTERVIEW</a>
+            <a href="">PROCESSDOKUMENTATION</a>
+        </nav>
     </header>
-    <section class="placeholder">
-        <h1>BESKRIVELSE AF KONCEPT</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, ad mollitia, ab, alias sint quas dolorem possimus ratione, voluptates fugit tempore iusto minima! Neque ipsa quod tempora, quasi culpa enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo culpa consequuntur architecto mollitia, ipsa distinctio maiores nam fuga eveniet, reiciendis animi quisquam cum. Omnis, dolorum. Porro fugit odit magnam unde!</p>
-        <h1>VIDEO</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque illum, officia ratione vitae alias dolores non sit! Maxime voluptates animi omnis, odit, adipisci non. Sapiente numquam soluta distinctio, ducimus corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum.</p>
-        <h1>INTERVIEW MED MÅLGRUPPEPERSON</h1>
-        <p>Vigtigste punkter fra interview (kun?)</p>
-
-        <h1>INTERVIEW MED EKSPERT</h1>
-        <p>Vigtigste punkter fra interview (kun?)</p>
+    <section id="splash">
+        <div class="splashtxt">
+            <h1>"Hold nu op med at køre for stærkt"</h1>
+            <p>-Vlado</p>
+        </div>
     </section>
+
+    <seciton id="koncept">
+        <div class="koncept_wrapper">
+            <div class="koncept_txt">
+                <h1>BESKRIVELSE AF KONCEPT</h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, ad mollitia, ab, alias sint quas dolorem possimus ratione, voluptates fugit tempore iusto minima! Neque ipsa quod tempora, quasi culpa enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo culpa consequuntur architecto mollitia, ipsa distinctio maiores nam fuga eveniet, reiciendis animi quisquam cum. Omnis, dolorum. Porro fugit odit magnam unde! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, ad mollitia, ab, alias sint quas dolorem possimus ratione, voluptates fugit tempore iusto minima! Neque ipsa quod tempora, quasi culpa enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo culpa consequuntur architecto mollitia, ipsa distinctio maiores nam fuga eveniet, reiciendis animi quisquam cum. Omnis, dolorum. Porro fugit odit magnam unde. Quo culpa consequuntur architecto mollitia, ipsa distinctio maiores nam fuga eveniet, reiciendis animi quisquam cum. Omnis, dolorum. Porro fugit odit magnam unde.Quo culpa consequuntur architecto mollitia, ipsa distinctio maiores nam fuga eveniet, reiciendis animi quisquam cum. Omnis, dolorum. Porro fugit odit magnam unde</p>
+            </div>
+            <div class="koncept_img"><img src="img/stock1.jpeg" alt="stockimage"></div>
+        </div>
+    </seciton>
+    <section id="video_sec">
+        <div id="video_wrapper">
+            <div class="video_vid"> <video controls>
+                    <source src="" type="video/mp4"></video></div>
+            <div class="video_txt">
+                <h1>VIDEO</h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque illum, officia ratione vitae alias dolores non sit! Maxime voluptates animi omnis, odit, adipisci non. Sapiente numquam soluta distinctio, ducimus corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum.</p>
+            </div>
+        </div>
+    </section>
+    <section id="interview">
+        <h1>INTERVIEWS</h1>
+        <div class="itw_wrapper">
+            <div id="itw_personer">
+                <h2>INTERVIEW MED MÅLGRUPPEPERSON</h2>
+                <img src="img/stock2.jpg">
+                <p>Vigtigste punkter fra interview (kun?)
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque illum, officia ratione vitae alias dolores non sit! Maxime voluptates animi omnis, odit, adipisci non. Sapiente numquam soluta distinctio, ducimus corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum.</p>
+            </div>
+            <div id="itw_ekspert">
+                <h2>INTERVIEW MED EKSPERT</h2>
+                <img src="img/stock3.jpeg">
+                <p>Vigtigste punkter fra interview (kun?). Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque illum, officia ratione vitae alias dolores non sit! Maxime voluptates animi omnis, odit, adipisci non. Sapiente numquam soluta distinctio, ducimus corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum.</p>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
 
     <script src=""></script>
 </body>
