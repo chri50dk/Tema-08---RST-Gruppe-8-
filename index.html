@@ -79,13 +79,25 @@
             <div id="itw_personer">
                 <h2>INTERVIEW MED MÅLGRUPPEPERSON</h2>
                 <img src="img/stock2.jpg">
-                <p>Vigtigste punkter fra interview (kun?)
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque illum, officia ratione vitae alias dolores non sit! Maxime voluptates animi omnis, odit, adipisci non. Sapiente numquam soluta distinctio, ducimus corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum.</p>
+                <ul class="personliste">
+                    <p>Interviewet med målgruppepersonen gik, som vi forventede. Heldigvis for os, var han super ærlig med sine meninger omkring fart og unge. Han sagde blandt andet, at han godt kunne lide at køre hurtigt, når han selv følte, at det var forsvarligt. Derudover sagde han, at konsekvenserne var ikke så store, i forhold til, hvor godt han selv havde styr på det. <br> Målgruppepersonens svar stemmer rigtig godt overens med, hvordan vores persona ville tænke omkring fart, så vi kan allerede se en god koalition mellem den fiktive person, vi lavede udfra den viden vi har om målgruppen, og den mand vi fandt til vores målgruppeinterview. <br>
+                        Sidste vigtige punkt er, at han nok ikke ville ændre sin adfærd, medmindre han fik en slem oplevelse med et biluheld, hvor han selv eller en pårørende var med.</p> <br>
+                    <li>Konsekvenserne er relative små</li>
+                    <li> Stemmer godt overens med vores fiktive personas</li>
+                    <li> Kræver en oplevelse hvor han selv eller en relation er involveret</li>
+                </ul>
             </div>
             <div id="itw_ekspert">
                 <h2>INTERVIEW MED EKSPERT</h2>
                 <img src="img/stock3.jpeg">
-                <p>Vigtigste punkter fra interview (kun?). Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque illum, officia ratione vitae alias dolores non sit! Maxime voluptates animi omnis, odit, adipisci non. Sapiente numquam soluta distinctio, ducimus corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum.</p>
+
+                <ul class="ekspertliste">
+                    <p>Vi interviewede en færdselsbetjent omkring fart og unge, og hvordan politiet oplever situationen. Ligesom i konceptet generelt, prøvede vi at lægge fokus på medpassageren. Betjenten sagde hertil også, at man som medpassager kan påvirke, at føreren sænker farten, ved at sige fra, når det går for stærkt, og vedkommende bliver utryg - dette er smadder vigtigt, idet medpassageren og fører oftest har en respektfuldt forhold. Mange af de bøder, der bliver langet ud til unge, der kører for stærkt, får dem oftest om aftenen. Ligesom vores målgruppeperson rigtigt nok sagde, så er de færreste unge mænd, der rent faktisk tænker over konsekvenserne.</p> <br>
+                    <li>Medpassagere kan bevirke, at billisten øger farten</li>
+                    <li> Den høje hastighed opleves oftest hen på aftenen eller først på natten</li>
+                    <li> Billisten tænker ikke over konsekvenserne</li>
+                </ul>.
+
             </div>
         </div>
     </section>
@@ -167,32 +179,40 @@
             const resultsContainer = document.getElementById("results");
             const submitButton = document.getElementById("submit");
             const myQuestions = [{
-                    question: "Who is the strongest?",
+                    question: "Hvem har vundet flest Grand Prixer nogensinde?",
                     answers: {
-                        a: "Superman",
-                        b: "The Terminator",
-                        c: "Waluigi, obviously"
+                        a: "Sebastian Vettel",
+                        b: "Lewis Hamilton",
+                        c: "Michael Schumacher"
                     },
                     correctAnswer: "c"
                 },
                 {
-                    question: "What is the best site ever created?",
+                    question: "Hvilke af disse populære energidrikmærker ejer også et F1-hold?",
                     answers: {
-                        a: "SitePoint",
-                        b: "Simple Steps Code",
-                        c: "Trick question; they're both the best"
+                        a: "Monster",
+                        b: "Red Bull",
+                        c: "Cult"
+                    },
+                    correctAnswer: "b"
+                },
+                {
+                    question: "Hvilke makkerpar kører for Ferrari i 2019-sæsonen?",
+                    answers: {
+                        a: "Sebastian Vettel og Max Verstappen",
+                        b: "Max Verstappen og Charles LeClerc",
+                        c: "Sebastian Vettel og Charles LeClerc",
                     },
                     correctAnswer: "c"
                 },
                 {
-                    question: "Where is Waldo really?",
+                    question: "Hvad hedder den danske stjerne, som kører for Haas F1 Team?",
                     answers: {
-                        a: "Antarctica",
-                        b: "Exploring the Pacific Ocean",
-                        c: "Sitting in a tree",
-                        d: "Minding his own business, so stop asking"
+                        a: "Tom Christensen",
+                        b: "Kris Nissen",
+                        c: "Kevin Magnussen",
                     },
-                    correctAnswer: "d"
+                    correctAnswer: "c"
                 }
             ];
 

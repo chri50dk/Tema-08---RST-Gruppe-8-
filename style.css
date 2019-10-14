@@ -19,6 +19,10 @@ body {
 }
 
 
+li {
+    font-family: 'Open Sans', sans-serif;
+}
+
 /*LOGO I HEADER*/
 /*
 figure {
@@ -245,7 +249,7 @@ header {
 .video_txt p,
 .itw_wrapper p {
     line-height: 23px;
-    font-size: 1.3rem;
+   /* font-size: 1.3rem;*/
 
 }
 
