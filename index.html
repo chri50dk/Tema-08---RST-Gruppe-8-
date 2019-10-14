@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kampagnesite - Gruppe 8</title>
+    <title>Kampagnesite - Gruppe 8B</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
@@ -34,14 +34,15 @@
                 </ul>
             </div>
         </nav>
-        <figure class="logo">
-            <img src="img/Logo.svg" alt="">
+        <figure class="logo"> <a href='index.html'>
+                <img src="img/Logohvidrigtig.svg" alt=""></a>
         </figure>
         <nav id="subnav">
-            <a href="">KAMPAGNE</a>
-            <a href="">VIDEO</a>
-            <a href="">INTERVIEW</a>
+            <a href="#koncept">KONCEPT</a>
+            <a href="#video_sec">VIDEO</a>
+            <a href="#interview">INTERVIEW</a>
             <a href="">PROCESSDOKUMENTATION</a>
+            <a href="#quiz_sec">QUIZ</a>
         </nav>
     </header>
     <section id="splash">
@@ -68,7 +69,7 @@
             <div class="video_txt">
                 <h1>VIDEO</h1>
                 <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque illum, officia ratione vitae alias dolores non sit! Maxime voluptates animi omnis, odit, adipisci non. Sapiente numquam soluta distinctio, ducimus corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque illum, officia ratione vitae alias dolores non sit! Maxime voluptates animi omnis, odit, adipisci non. Sapiente numquam soluta distinctio, ducimus corporis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum. Animi perferendis quia ullam nobis consequuntur fugiat, inventore, ipsa sed quo, accusamus dicta temporibus illum quisquam natus necessitatibus quasi, nisi minus earum. <br> Se alle videoformater <a href="video.html">her</a> </p>
             </div>
         </div>
     </section>
@@ -88,9 +89,121 @@
             </div>
         </div>
     </section>
+    <section id="quiz_sec">
+        <h1>F1 QUIZ</h1> <br>
+        <div id="quiz"></div>
+        <button id="submit">Submit Quiz</button>
+        <div id="results"></div>
+    </section>
     <footer></footer>
 
-    <script src=""></script>
+    <script>
+        (function() {
+            function buildQuiz() {
+                // we'll need a place to store the HTML output
+                const output = [];
+
+                // for each question...
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+                    // we'll want to store the list of answer choices
+                    const answers = [];
+
+                    // and for each available answer...
+                    for (letter in currentQuestion.answers) {
+                        // ...add an HTML radio button
+                        answers.push(
+                            `<label>
+            <input type="radio" name="question${questionNumber}" value="${letter}">
+            ${letter} :
+            ${currentQuestion.answers[letter]}
+          </label>`
+                        );
+                    }
+
+                    // add this question and its answers to the output
+                    output.push(
+                        `<div class="question"> ${currentQuestion.question} </div>
+        <div class="answers"> ${answers.join("")} </div>`
+                    );
+                });
+
+                // finally combine our output list into one string of HTML and put it on the page
+                quizContainer.innerHTML = output.join("");
+            }
+
+            function showResults() {
+                // gather answer containers from our quiz
+                const answerContainers = quizContainer.querySelectorAll(".answers");
+
+                // keep track of user's answers
+                let numCorrect = 0;
+
+                // for each question...
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+                    // find selected answer
+                    const answerContainer = answerContainers[questionNumber];
+                    const selector = `input[name=question${questionNumber}]:checked`;
+                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                    // if answer is correct
+                    if (userAnswer === currentQuestion.correctAnswer) {
+                        // add to the number of correct answers
+                        numCorrect++;
+
+                        // color the answers green
+                        answerContainers[questionNumber].style.color = "lightgreen";
+                    } else {
+                        // if answer is wrong or blank
+                        // color the answers red
+                        answerContainers[questionNumber].style.color = "red";
+                    }
+                });
+
+                // show number of correct answers out of total
+                resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+            }
+
+            const quizContainer = document.getElementById("quiz");
+            const resultsContainer = document.getElementById("results");
+            const submitButton = document.getElementById("submit");
+            const myQuestions = [{
+                    question: "Who is the strongest?",
+                    answers: {
+                        a: "Superman",
+                        b: "The Terminator",
+                        c: "Waluigi, obviously"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "What is the best site ever created?",
+                    answers: {
+                        a: "SitePoint",
+                        b: "Simple Steps Code",
+                        c: "Trick question; they're both the best"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "Where is Waldo really?",
+                    answers: {
+                        a: "Antarctica",
+                        b: "Exploring the Pacific Ocean",
+                        c: "Sitting in a tree",
+                        d: "Minding his own business, so stop asking"
+                    },
+                    correctAnswer: "d"
+                }
+            ];
+
+            // display quiz right away
+            buildQuiz();
+
+            // on submit, show results
+            submitButton.addEventListener("click", showResults);
+        })();
+
+    </script>
 </body>
 
 </html>
