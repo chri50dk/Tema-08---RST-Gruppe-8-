@@ -172,6 +172,10 @@ header {
     padding: 0;
 }
 
+#menu li:hover {
+    color: white;
+}
+
 
 
 /*SPLASHBILLEDE*/
