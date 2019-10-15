@@ -270,6 +270,12 @@ header {
 
 }
 
+.koncept_txt h2 {
+    font-size: 1.5rem;
+    font-family: 'safety';
+
+}
+
 .koncept_txt p,
 .itw_wrapper p {
     line-height: 23px;
