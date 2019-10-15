@@ -23,17 +23,6 @@ li {
     font-family: 'Open Sans', sans-serif;
 }
 
-/*LOGO I HEADER*/
-/*
-figure {
-    margin: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding: 0;
-}
-*/
 
 .logo img {
     width: 100%;
@@ -189,15 +178,49 @@ header {
 #splash {
     width: 100vw;
     height: 100vh;
-    max-width: none;
-    background-size: cover;
-    background-image: url(img/splashbillede.jpeg);
-    margin-left: 0px;
-    margin-right: 0px;
+    position: relative;
+    overflow: hidden;
 }
 
+#videoSplash {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    max-width: none;
+    object-fit: cover;
+
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+
+    #videoSplash {
+        width: 100vw;
+        height: auto;
+    }
+}
+
+
+@media (max-aspect-ratio: 16/9) {
+    #videoSplash {
+        width: auto;
+        height: 100vh;
+    }
+}
+
+@supports (object-fit: cover) {
+    #videoSplash {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
 .splashtxt {
-    position: relative;
+    position: absolute;
     width: 100%;
     text-align: center;
     top: 70%;
@@ -227,8 +250,8 @@ header {
 
 /*SECTION KONCEPT*/
 
-.koncept_wrapper {
-    color: black;
+#koncept {
+    display: flex;
 }
 
 .koncept_txt {
@@ -404,7 +427,7 @@ footer {
 }
 
 .footer_indhold p {
-    color: lightgray;
+    color: gray;
     font-family: 'safety';
     padding: 5px;
 }
@@ -431,15 +454,9 @@ footer {
 
     .quote_txt {
         font-size: 2.9rem;
-        line-height: 60px;
+        line-height: 80px;
         padding-right: 100px;
         padding-left: 100px;
     }
 
-}
-
-@media only screen and (min-width: 500px) {
-    #splash {
-        background-position: 60% 0%
-    }
 }
