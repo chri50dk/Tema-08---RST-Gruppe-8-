@@ -273,6 +273,9 @@ header {
 .koncept_txt h2 {
     font-size: 1.5rem;
     font-family: 'safety';
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: 40px;
 
 }
 
