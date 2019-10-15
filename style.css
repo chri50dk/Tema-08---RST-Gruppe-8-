@@ -323,7 +323,8 @@ header {
 
 /*Interview section*/
 #interview {
-    margin: 30px;
+    padding: 30px;
+    background-color: #E5E5E5;
 }
 
 .itw_wrapper {
