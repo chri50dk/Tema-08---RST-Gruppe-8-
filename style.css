@@ -231,25 +231,21 @@ header {
     color: black;
 }
 
-.koncept_txt,
-.video_txt {
+.koncept_txt {
     flex-grow: 1;
     flex-basis: 500px;
     margin: 30px 30px 0 30px;
 }
 
-.koncept_txt h1,
-.video_txt h1 {
+.koncept_txt h1 {
     font-size: 2.5rem;
     font-family: 'safety';
 
 }
 
 .koncept_txt p,
-.video_txt p,
 .itw_wrapper p {
     line-height: 23px;
-   /* font-size: 1.3rem;*/
 
 }
 
@@ -284,14 +280,22 @@ header {
 }
 
 .video_vid {
-    flex-grow: 1;
-    flex-basis: 500px;
     width: 100%;
+    margin: 30px 30px 30px 30px;
+}
 
+.video_vid h1 {
+    font-size: 2.5rem;
+    font-family: 'safety';
+    padding-bottom: 15px;
 }
 
 .video_vid video {
     width: 100%;
+}
+
+.video_vid p {
+    padding-top: 15px;
 }
 
 /*Interview section*/
@@ -376,8 +380,18 @@ header {
 /*footer*/
 
 footer {
-    height: 100px;
+    height: 100%;
     background-color: #272525;
+}
+
+.footer_indhold p {
+    color: lightgray;
+    font-family: 'safety';
+    padding: 5px;
+}
+
+.footer_indhold img {
+    padding: 10px;
 }
 
 /*MEDIA*/
