@@ -336,6 +336,21 @@ header {
     width: 100%;
 }
 
+/*QUOTE CSS*/
+
+#quote {
+    background-color: #414B5A;
+}
+
+.quote_txt {
+    color: white;
+    font-family: 'safety';
+    font-size: 1.5rem;
+    margin: 30px;
+}
+
+
+
 /*Quiz indstillinger*/
 
 #quiz_sec {
@@ -384,6 +399,10 @@ footer {
     background-color: #272525;
 }
 
+.footer_indhold {
+    margin-left: 50px;
+}
+
 .footer_indhold p {
     color: lightgray;
     font-family: 'safety';
@@ -408,7 +427,13 @@ footer {
     .splashtxt {
         top: 70%;
         left: 35%;
+    }
 
+    .quote_txt {
+        font-size: 2.9rem;
+        line-height: 60px;
+        padding-right: 100px;
+        padding-left: 100px;
     }
 
 }
